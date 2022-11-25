@@ -1,10 +1,29 @@
-import 'dart:html';
-
+import 'package:flutter/src/widgets/container.dart';
+import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
+import 'package:number_inc_dec/number_inc_dec.dart';
 
-
-class BasketPage extends StatelessWidget {
+class BasketPage extends StatefulWidget {
   const BasketPage({super.key});
+
+  @override
+  State<BasketPage> createState() => _BasketPageState();
+}
+
+class _BasketPageState extends State<BasketPage> {
+  int _counter = 0;
+
+  void _incrementCounter(){
+    setState(() {
+      _counter++;
+    });
+  }
+
+  void _decrementCounter(){
+    setState(() {
+      _counter--;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -34,27 +53,16 @@ class BasketPage extends StatelessWidget {
 ),
                   onPressed: () {/* ... */},
                 ),
-                const SizedBox(width: 8),
-                TextButton(
-                  child: Icon(
-  Icons.remove_outlined,
-),
-                  onPressed: () {/* ... */},
-                ),
-                const Text('Qté'),
-                TextButton(
-                  child: Icon(
-  Icons.add_outlined,
-),
-                  onPressed: () {/* ... */},
-                ),
+                      FloatingActionButton.small(onPressed: _decrementCounter, child: const Icon(Icons.remove, color: Colors.blue,), shape: RoundedRectangleBorder(), backgroundColor: Colors.white,),
+                      Padding(padding: EdgeInsets.all(15), child: Text('$_counter', ),),
+      FloatingActionButton.small(onPressed: _incrementCounter, child: const Icon(Icons.add, color: Colors.blue,), shape: RoundedRectangleBorder(), backgroundColor: Colors.white,),
                 const SizedBox(width: 8),
               ],
             ),
           ],
         ),
       ),
-      ],
+],
       ),
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () {
