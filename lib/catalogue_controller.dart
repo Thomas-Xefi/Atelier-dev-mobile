@@ -2,6 +2,7 @@ import 'package:get/get.dart';
 
 class GetxCatalogueController extends GetxController with StateMixin {
   Rx<int> quantity = 0.obs;
+  Rx<String> selectedValue = ''.obs;
 
   @override
   void onInit() {
