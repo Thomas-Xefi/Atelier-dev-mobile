@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "762403803198",
+    "project_id": "atelier-dev-mobile",
+    "storage_bucket": "atelier-dev-mobile.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:762403803198:android:2991b172145e6a1713c16f",
+        "android_client_info": {
+          "package_name": "com.example.atelier"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "762403803198-9h6jtgt7ir4kmsh3b2uqqso54cdpugr8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-SAwTzIxn8y38A_oa5Wcjc_cnvkp7NiM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "762403803198-9h6jtgt7ir4kmsh3b2uqqso54cdpugr8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
