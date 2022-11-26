@@ -1,8 +1,10 @@
-
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:atelier/basket_page.dart';
+import 'package:atelier/ui/view/catalogue_page_view.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'catalogue_bindings.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -28,12 +30,25 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'BuyMyCar',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.red,
       ),
       home: const BasketPage(),
+      getPages: [
+        GetPage(
+          name: '/catalogue',
+          page: () => const CataloguePageView(),
+          binding: CatalogueBindings(),
+        ),
+        GetPage(
+          name: '/basket',
+          page: () => const BasketPage(),
+        ),
+      ],
+      initialRoute: ('/catalogue'),
     );
   }
 }
