@@ -29,6 +29,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.9.0"
+  badges:
+    dependency: "direct main"
+    description:
+      name: badges
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.0.3"
   boolean_selector:
     dependency: transitive
     description:
@@ -214,6 +221,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  footer:
+    dependency: "direct main"
+    description:
+      name: footer
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.4"
   freezed:
     dependency: "direct main"
     description:

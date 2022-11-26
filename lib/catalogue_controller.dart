@@ -10,6 +10,14 @@ class GetxCatalogueController extends GetxController with StateMixin {
     'img/skyline-gtr.jpg',
     'img/toyota-supra-mk4.jpg'
   ];
+  List<String> tabNameImg = [
+    'Aston martin db',
+    'Bugatti chiron',
+    'Pagani Huayra',
+    'Skyline gtr',
+    'Ttoyota supra mk4'
+  ];
+  Rx<bool> isConnected = false.obs;
 
   @override
   void onInit() {
@@ -19,14 +27,12 @@ class GetxCatalogueController extends GetxController with StateMixin {
   }
 
   void addCart() {
-    if (quantity.value < 10) {
-      quantity.value++;
-    }
+    if (quantity.value < 10) {}
+    quantity.value++;
   }
 
   void removeCart() {
-    if (quantity.value > 0) {
-      quantity.value--;
-    }
+    if (quantity.value > 0) {}
+    quantity.value--;
   }
 }
