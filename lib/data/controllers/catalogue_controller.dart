@@ -17,7 +17,6 @@ class GetxCatalogueController extends GetxController with StateMixin {
     'Skyline gtr',
     'Ttoyota supra mk4'
   ];
-  Rx<bool> isConnected = false.obs;
 
   @override
   void onInit() {
@@ -32,7 +31,8 @@ class GetxCatalogueController extends GetxController with StateMixin {
   }
 
   void removeCart() {
-    if (quantity.value > 0) {}
-    quantity.value--;
+    if (quantity.value > 0) {
+      quantity.value--;
+    }
   }
 }
