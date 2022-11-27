@@ -12,18 +12,18 @@ import 'data/bindings/catalogue_bindings.dart';
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // if (kIsWeb) {
-  //   await Firebase.initializeApp(
-  //       options: const FirebaseOptions(
-  //           apiKey: "AIzaSyDZg9vr_ESsC9bnOzg_upD78A8yu-EPWHw",
-  //           authDomain: "atelier-dev-mobile.firebaseapp.com",
-  //           appId: "1:762403803198:web:5c5614ad460771cd13c16f",
-  //           messagingSenderId: "762403803198",
-  //           storageBucket: "atelier-dev-mobile.appspot.com",
-  //           projectId: "atelier-dev-mobile"));
-  // } else {
-  //   await Firebase.initializeApp();
-  // }
+  if (kIsWeb) {
+    await Firebase.initializeApp(
+        options: const FirebaseOptions(
+            apiKey: "AIzaSyDZg9vr_ESsC9bnOzg_upD78A8yu-EPWHw",
+            authDomain: "atelier-dev-mobile.firebaseapp.com",
+            appId: "1:762403803198:web:5c5614ad460771cd13c16f",
+            messagingSenderId: "762403803198",
+            storageBucket: "atelier-dev-mobile.appspot.com",
+            projectId: "atelier-dev-mobile"));
+  } else {
+    await Firebase.initializeApp();
+  }
 
   runApp(const MyApp());
 }

@@ -87,15 +87,24 @@ class BasketPage extends GetView<GetxBasketController> {
       body: Obx(
         () => Column(
           children: [
-            const Padding(
-              padding: EdgeInsets.all(16.0),
-              child: Text(
-                'Panier (nombre)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontFamily: 'Poppins',
-                    fontSize: 20),
-              ),
+            Row(
+              children: [
+                BackButton(
+                  onPressed: () {
+                    Get.back();
+                  },
+                ),
+                const Padding(
+                  padding: EdgeInsets.all(16.0),
+                  child: Text(
+                    'Panier (nombre)',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontFamily: 'Poppins',
+                        fontSize: 20),
+                  ),
+                ),
+              ],
             ),
             Card(
               child: Column(
